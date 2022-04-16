@@ -14,48 +14,49 @@
 
 package main
 
-func main() {
+import (
+	"fmt"
+)
 
-	for i :=1; i<=3; i++ {
-	print(i)
-	println(" in the loop")
+func main() {
+	for i := 1; i <= 3; i++ {
+		print(i)
+		println(" in the loop")
 	}
-	
+
 	println("\n --While Loop-- \n")
-	
-	i :=1
-	for i<=3{
-	print(i)
-	println(" in the While")
-	i++;
+
+	var i = 0
+	for i < 10 {
+		if i%2 == 0 {
+			fmt.Print("while loop! ", i, "\t")
+		}
+		i += 1
 	}
-	
-	
+
+	i = 0
+	for i <= 10 {
+		print("while loop again...")
+		i++
+	}
+
+	// the perfect loop
+	for i := 1; i <= 3; i++ {
+		print(i)
+		println(" in the loop")
+	}
+
+	// the infinite Loop without the break
 	for {
-	println("The infine Loop")
-	break;
+		println("The infinite Loop")
+		break
 	}
-	
+
 	// printing all the even number
-	for i:= 0; i<100; i++{
-	if i%2 !=0{
-	continue;
+	for i := 0; i < 100; i++ {
+		if i%2 != 0 { continue }
+		print(i, "\t")
 	}
-	print(i, "\t")
-	}
+
 } // main ends
 
-
-
-O/P:
-
-1 in the loop
-2 in the loop
-3 in the loop
-
- --While Loop-- 
-
-1 in the While
-2 in the While
-3 in the While
-The infine Loop
