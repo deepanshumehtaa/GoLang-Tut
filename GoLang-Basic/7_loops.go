@@ -57,6 +57,17 @@ func main() {
 		if i%2 != 0 { continue }
 		print(i, "\t")
 	}
+	
+	// loop over the array
+	var myarr = [...]string{"Deepanshu", "Mehta", "Hello", "boi"}
+	for i := 0; i < len(myarr); i++ {
+		println(myarr[i])
+	}
+
+	// looping over the array, good method
+	for index, element := range myarr {
+		println(index, element)
+	}
 
 } // main ends
 
