@@ -55,7 +55,7 @@
 
 package main
 import (
-	"fmt"
+  "fmt"
 )
 
 
@@ -79,18 +79,26 @@ func main() {
 						
 	// Anonymous Func..................
 	
+	// 1st Anonymous
 	func(i int){
       	 		println("...", i)
 	}(10) 							// calling function with arguments, 10
 	
+	// 2nd Anonymous
 	f := func(s string){
-		if s == "" {
-			s = "Default-value"
-		}
-      		println(s, "hal chal.??")
+	  if s == "" {
+	    s = "Default-value"
+	  }
+	  println(s, "hal chal.??")
 	}
 	
 	f("kya")						// Calling the function, kya hal chal.??
+	
+	//3rd Anonymous
+	var value = func(i int) (int, ) {
+	  return i + 2000
+	}
+	println(value(23))
 	
 	
 }// main ends
@@ -103,7 +111,7 @@ func printing(s string, num int ){				// defining printing
 
 func get_strings(s1, s2 string){				// defining get_strings
 	if s1 == "" {						// Rule 11
-    		s1 = "default-value"
+    	  s1 = "default-value"
   	}
 	s1 += s2 
 	fmt.Println(s1)
@@ -126,7 +134,7 @@ func avg(arr ...int)(float64){
 	var sum float64 = 0					// defining avg
 					
 	for i :=arr[0]; i<=len(arr); i++ {
-		sum += float64(i)
+	  sum += float64(i)
 	}
 	ans := sum/float64(len(arr))
 	return ans
