@@ -132,4 +132,30 @@ func avg(arr ...int)(float64){
 	return ans
 }
 
+// ................................. SIMPLE EXAMPLE .......................................
+package main
+
+import (
+  "math"
+)
+
+
+// Function for comparing the value and then return a flag and calculated value
+func myFunction(x int) (bool, int) {
+  if x < 100 {
+    return true, x + 10
+  } else {
+    var ans = 0.0 // equivalent to ~~> var ans float64 = 0
+    ans = math.Pow(float64(x), 10)
+    return false, int(ans)
+}
+}
+
+func main() {
+  flag, val := myFunction(99)
+  println(flag, val)
+
+  flag, val = myFunction(101)
+  println(flag, val)
+}
 
