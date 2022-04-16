@@ -1,6 +1,8 @@
 "fmt: stands for the Format package."
-"This package allows to format basic strings, values, or anything and print them or collect user input from the console, or write into a file using a writer or even print customized fancy error messages. This package is all about formatting input and output"
+"This package allows to format basic strings, values, or anything and print them or 
+"collect user input from the console, or write into a file using a writer or even print customized fancy error messages. This package is all about formatting input and output"
 
+" There is Nothing called CHAR in GO, but rune which is stored as ASCII in the memory address and not as character "
 
 package main
 import "fmt"
@@ -62,6 +64,21 @@ fmt.Printf("\n The Value is: %v %v %v", x,y,z)
 fmt.Printf("\n <<<<>>>>> %v %v %v %v \n", var1, var2, var3, var4)
 
 
+// automatic assigning datatype with var without using int, bool, etc
+var au1 = 2*2 == 4 || 10%3 == 0 // bool
+var au2 = "The Long String"     // string
+var au3 = 's'                   // rune
+var au4 = 5                     // int
+var au5 = 5.0                   // float64
+var au6 = 5.0 + 50              // float64
+var au7 = true                  // bool
+var au8 = false && 1  // error
+var au9 = 5 + 7i                // complex
+
+println(au1, au2, au3, au4)
+println(au5, au6, au7)
+println(au8, au9)
+
 //********************************Local Global***********************************
 
 println(global_variable)
@@ -101,6 +118,17 @@ println(ui8, ui16, ui64)  // 20 1000 99000
 if ui64 == ui8 {
   println("Hello Daddy!")
 }
+
+
+// CHAR, rune and string ................................................
+var str string
+var ch byte // same as char
+var ru rune // same as char
+
+str = "Motto"
+ch = 'M'
+ru = 'M'
+println(str, ch, ru)
 
 	
 } // end main
