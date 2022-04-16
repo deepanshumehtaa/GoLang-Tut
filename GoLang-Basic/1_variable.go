@@ -85,10 +85,23 @@ if global_variable == 400{
 
 if bool_var{
         fmt.Println("True")
-}else{
+} else {
 	fmt.Println("False")
 }
+	
 
+// the problem with unsigned int is of comparisons, it can't be compared with any other datatype
+var ui8 uint8 = 20      // uint8 can only store number b/w 0 to 255
+var ui16 uint16 = 1000  // ui16 is 0 to 65535
+var ui64 uint64 = 99000 // very large range
 
+println(ui8, ui16, ui64)  // 20 1000 99000
+
+// Error unable to compare the values
+if ui64 == ui8 {
+  println("Hello Daddy!")
+}
+
+	
 } // end main
 
