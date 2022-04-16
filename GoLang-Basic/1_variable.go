@@ -40,7 +40,7 @@ x,y,z := -10, 0, 10
 var(	var1 = 50
 	var2 = 25.22
 	var3 string = "Telefonía"
-	var4 bool
+	var4 bool  // default value is false
 )
 
 fmt.Printf("\n The Type is: %T", a)
