@@ -41,16 +41,16 @@ func main() {
 } // main ends
 
 // Constants
-// Value: 500 and Type: int
+// Value: 0 and Type: int
 // Constants - abc
-// Value: 500 and Type: int
-// Value: 500 and Type: int
-// Value: 500 and Type: int
+// Value: 0 and Type: int
+// Value: 1 and Type: int
+// Value: 2 and Type: int
 // Artmatics---------
-// Value: 600 and Type: int
-// Value: 1000 and Type: int
-// Value: 250 and Type: int
-// Value: 1100 and Type: int
-// Value: 399.5 and Type: float64
-// Value: 500 and Type: int
-// Value: 500 and Type: int
+// Value: 103 and Type: int
+// Value: 8 and Type: int
+// Value: 2 and Type: int
+// Value: 109 and Type: int
+// Value: -93.5 and Type: float64
+// Value: 8 and Type: int
+// Value: 9 and Type: int
