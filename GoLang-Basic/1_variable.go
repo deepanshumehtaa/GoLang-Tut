@@ -75,7 +75,7 @@ var au4 = 5                     // int
 var au5 = 5.0                   // float64
 var au6 = 5.0 + 50              // float64
 var au7 = true                  // bool
-var au8 = false && 1  // error
+var au8 = false && true         // false
 var au9 = 5 + 7i                // complex
 
 println(au1, au2, au3, au4)
@@ -118,9 +118,9 @@ var ui64 uint64 = 99000 // very large range
 println(ui8, ui16, ui64)  // 20 1000 99000
 
 // Error unable to compare the values
-if ui64 == ui8 {
-  println("Hello Daddy!")
-}
+// if ui64 == ui8 {
+//  println("Hello Daddy!")
+// }
 
 
 // CHAR, rune and string ................................................
@@ -135,15 +135,28 @@ ru = 'M'
 println(str, ch, ru)
 
 
-var str_var string
-var int_var int
-var float64_var float64
-var float32_var float32
-var boool_var bool
-var byte_var byte
-var rune_var rune
-fmt.Println(str_var, int_var, float64_var, float32_var, boool_var, byte_var, rune_var)  //  0 0 0 false 0 0
+var str_var string  // ""
+var int_var int  // 0
+var float64_var float64 // 0
+var float32_var float32 // 0
+var boool_var bool // false
+var byte_var byte  // 0
+var rune_var rune  // alias for 32-bit int.
+myMap := map[string]float32{}  // {"Golang": 85, "Java": 80, "Python":81}
+var myMap1 map[string]float32
 
+fmt.Println(str_var, int_var, float64_var, float32_var, boool_var, byte_var, rune_var, myMap, myMap1)  //  0 0 0 false 0 0 map[] map[]
+
+
+
+// maps
+myMap1 = map[string]float32{
+    "Golang": 85.0,
+    "Java":   80.0,
+    "Python": 81.0,
+}
+myMap1["Maths"] = 99.9
+fmt.Println(myMap1)  // map[Golang:85 Java:80 Maths:99.9 Python:81]
 	
 } // end main
 
@@ -174,4 +187,4 @@ fmt.Println(str_var, int_var, float64_var, float32_var, boool_var, byte_var, run
 // False
 // 20 1000 99000
 // Motto 77 77
- 0 0 0 false 0 0
+// 0 0 0 false 0 0
