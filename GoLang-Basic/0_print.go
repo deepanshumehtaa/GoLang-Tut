@@ -25,16 +25,18 @@ func main() {
 	println("without FMT")
 	print(10000)
 
-	k := 600
-	println(k)
+	i := 600
+	j := 5.5
+	fmt.Println(i, reflect.TypeOf(i))  // 600 int
+	fmt.Println(j, reflect.TypeOf(j))  // 5.5 float64
 
 	// you cant use printf without fmt.
 
 	// with variables
 	items := []int {10, 20, 50, 100}
 
-	println(items)       // print the address
-	fmt.Println(items)   // print the values
+	println(items)       // print the address [4/4]0xc00007a020
+	fmt.Println(items, reflect.TypeOf(items))   // [10 20 50 100] []int
 	
 	
 	//---------------------Sprintf and Sprintln------------------------------------------
@@ -51,7 +53,7 @@ func main() {
 	result0 := fmt.Sprintln("How many", 100, "or", value0, true)  // return the concated string
 	fmt.Println("[" + result0 + "]")
 
-	fmt.Print(goCon1, goCon2, reflect.TypeOf(goCon2))
+	// fmt.Print(goCon1, goCon2, reflect.TypeOf(goCon2))
 	
 	/*
 	
