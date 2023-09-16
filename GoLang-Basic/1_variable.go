@@ -128,10 +128,21 @@ var str string
 var ch byte // same as char
 var ru rune // same as char
 
+
 str = "Motto"
 ch = 'M'
 ru = 'M'
 println(str, ch, ru)
+
+
+var str_var string
+var int_var int
+var float64_var float64
+var float32_var float32
+var boool_var bool
+var byte_var byte
+var rune_var rune
+fmt.Println(str_var, int_var, float64_var, float32_var, boool_var, byte_var, rune_var)  //  0 0 0 false 0 0
 
 	
 } // end main
