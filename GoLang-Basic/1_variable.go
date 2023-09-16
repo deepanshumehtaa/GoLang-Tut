@@ -130,6 +130,15 @@ ch = 'M'
 ru = 'M'
 println(str, ch, ru)
 
+
+var str_var string
+var int_var int
+var float64_var float64
+var float32_var float32
+var bool_var bool
+var byte_var byte
+var rune_var rune
+fmt.Println(str_var, int_var, float64_var, float32_var, bool_var, byte_var, rune_var)
 	
 } // end main
 
