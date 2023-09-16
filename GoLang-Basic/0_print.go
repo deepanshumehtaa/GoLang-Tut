@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
@@ -45,8 +48,10 @@ func main() {
 	fmt.Println(result)
 	
 	
-	result0 := fmt.Sprintln("How many", 100, "or", value0, true) 
+	result0 := fmt.Sprintln("How many", 100, "or", value0, true)  // return the concated string
 	fmt.Println("[" + result0 + "]")
+
+	fmt.Print(goCon1, goCon2, reflect.TypeOf(goCon2))
 	
 	/*
 	
