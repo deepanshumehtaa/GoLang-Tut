@@ -93,7 +93,6 @@ global_variable = global_variable - 100
 println(global_variable)
 
 
-
 //********************************if-else****************************************
 
 var bool_var bool
@@ -128,16 +127,6 @@ println(ui8, ui16, ui64)  // 20 1000 99000
 
 
 // CHAR, rune and string ................................................
-var str string
-var ch byte // same as char
-var ru rune // same as char
-
-
-str = "Motto"
-ch = 'M'
-ru = 'M'
-println(str, ch, ru)
-
 
 var str_var string
 var int_var int
