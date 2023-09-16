@@ -21,6 +21,7 @@ const goCon3 float64 = 12.5*6   // get initialized at compile time
 const goCon4 float64 = math.sqrt(100)   // error, cannot initialized on runtime
 
 const goCon5 = 2000   // without datatype **BEST**
+const goCon6 = "OK OK will work !"
 
 func main() {
 	println("Constants")
