@@ -59,3 +59,14 @@ func main() {
 
 } // main ends
 
+// O/P:
+// without FMT
+// 10000600
+// [4/4]0xc0000a2000
+// [10 20 50 100]
+// I saw 2 trees in the park.
+
+// I saw 2 trees in the park.
+
+// [How many 100 or 2 true
+// ]
