@@ -1,8 +1,11 @@
+/*
+
 "fmt: stands for the Format package."
 "This package allows to format basic strings, values, or anything and print them or 
 "collect user input from the console, or write into a file using a writer or even print customized fancy error messages. This package is all about formatting input and output"
 
 " There is Nothing called CHAR in GO, but rune which is stored as ASCII in the memory address and not as character "
+*/
 
 package main
 import "fmt"
@@ -130,15 +133,34 @@ ch = 'M'
 ru = 'M'
 println(str, ch, ru)
 
-
-var str_var string
-var int_var int
-var float64_var float64
-var float32_var float32
-var bool_var bool
-var byte_var byte
-var rune_var rune
-fmt.Println(str_var, int_var, float64_var, float32_var, bool_var, byte_var, rune_var)
 	
 } // end main
 
+
+// 42
+// 10
+// 101.4
+
+//  The Type is: int
+//  The Value is: 50
+//  The Type is: int32
+//  The Value is: 90
+//  The Type is: float64
+//  The Value is: 45.65
+//  The Type is: string
+//  The Value is: THE
+//  The Type is: bool
+//  The Value is: true
+//  The Type is: int int int
+//  The Value is: -10 0 10
+//  <<<<>>>>> 50 25.22 Telefonía false 
+// true The Long String 115 5
+// +5.000000e+000 +5.500000e+001 true
+// false (+5.000000e+000+7.000000e+000i)
+// 500
+// 400
+// Subtraction
+// False
+// 20 1000 99000
+// Motto 77 77
+ 0 0 0 false 0 0
