@@ -27,10 +27,21 @@ func main() {
 	fmt.Printf("%v  \n", 2 != -2)
 	
 	println("Less-than-greater-than")
-	fmt.Printf("%v  \n", 2 == 2)
+	fmt.Printf("%v  \n", 1 <= 10)
 
 
 } // main ends
 
 // O/P:
+// Rule-1
+// div in int: 50  
+// div in float: 50.5  
+// add-sub-mul-remainder: 1 
+// Logical
+// true  
+// true  
+// false  
+// true  
+// Less-than-greater-than
+// true
 
