@@ -73,18 +73,18 @@ fmt.Printf("\n <<<<>>>>> %v %v %v %v \n", var1, var2, var3, var4)
 // automatic assigning datatype with var without using int, bool, etc
 var au1 = 2*2 == 4 || 10%3 == 0 // bool
 var au2 = "The Long String"     // string
-var au3 = 's'                   // rune
-var au4 = 5                     // int
-var au5 = 5.0                   // float64
+var au3 = 'a'                   // rune, 97
+var au4 = 0                     // int
+var au5 = 0.0                   // float64
 var au6 = 5.0 + 50              // float64
 var au7 = true                  // bool
 var au8 = false && true         // false
 var au9 = 5 + 7i                // complex
-var au10 = ""                // string, but u can't defined '' -> it is type `rune`
+var au10 = ""                	// string
 
-println(au1, au2, au3, au4)
+println(">>>>>>>>>>", au1, au2, au3, au4)
 println(au5, au6, au7)
-fmt.Println(au8, au9, au10, reflect.TypeOf(au10))
+fmt.Println(au8, au9, au10, reflect.TypeOf(au4))
 
 //********************************Local Global***********************************
 
