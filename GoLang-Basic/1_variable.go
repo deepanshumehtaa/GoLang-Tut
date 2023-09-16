@@ -8,7 +8,10 @@
 */
 
 package main
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 
 var global_variable int = 500
@@ -77,10 +80,11 @@ var au6 = 5.0 + 50              // float64
 var au7 = true                  // bool
 var au8 = false && true         // false
 var au9 = 5 + 7i                // complex
+var au10 = ""                // string, but u can't defined '' -> it is type `rune`
 
 println(au1, au2, au3, au4)
 println(au5, au6, au7)
-println(au8, au9)
+fmt.Println(au8, au9, au10, reflect.TypeOf(au10))
 
 //********************************Local Global***********************************
 
@@ -135,12 +139,12 @@ ru = 'M'
 println(str, ch, ru)
 
 
-var str_var string  // ""
-var int_var int  // 0
-var float64_var float64 // 0
-var float32_var float32 // 0
-var boool_var bool // false
-var byte_var byte  // 0
+var str_var string
+var int_var int
+var float64_var float64
+var float32_var float32
+var boool_var bool
+var byte_var byte
 var rune_var rune  // alias for 32-bit int.
 myMap := map[string]float32{}  // {"Golang": 85, "Java": 80, "Python":81}
 var myMap1 map[string]float32
