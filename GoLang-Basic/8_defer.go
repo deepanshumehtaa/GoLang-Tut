@@ -14,7 +14,8 @@
 	Every cpp file get genrated into object file.
 
    Rules:
-	1. defer pushes the function call at the starting of the stack, thus executed at the end.
+	Defer ensure that a function call is performed later in a program's execution.
+	1. `defer` pushes the function call at the starting of the stack, thus executed at the end.
 	2. by end means end of all the function present in the main.
 	3. NOTE: defer call in the loop 3 times and the every result of defer stores in the starting of stack thus o/p: 321
 	4. In Go language, multiple defer statements are allowed in the same program and they are executed in LIFO(Last-In, First-Out) or STACK.
@@ -23,7 +24,10 @@
 	6. Unlike variables, we can left fuction decleared but not used.
 	
 	Application:
-	1. 
+	1. purposes like cleanup or resource management.
+	2. tasks such as closing files, releasing locks, or logging activity.
+	3. Panic Recovery: defer in conjunction with recover to handle panics gracefully.
+	   When a panic occurs, deferred functions are still executed, allowing you to recover from the panic and take appropriate action.
 	
 */
 
@@ -66,5 +70,4 @@ func main() {
 
 
 } // main ends
-
 
