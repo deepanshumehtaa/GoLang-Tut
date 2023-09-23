@@ -41,16 +41,17 @@ func main() {
 	fmt.Println(arr)		// [1 2 3 4 5]
 	
 	// slice
-	slc := []int{10,20,30,}		// [10 20 30]
+	slc := []int{10,20,30,}		// [10 20 30], IT is slice becz, size is not given
 	fmt.Println(slc)
 	
-	// slice of an array
+	// slice from an array
 	slc_arr := arr[1:4]		// [2 3 4]
 	fmt.Println(slc_arr)
 	
-	// Types
-	fmt.Printf("Type: %T", arr)  	//Type: [5]int
-	fmt.Printf("Type: %T", slc_arr)	//Type: []int
+
+	// `capacity` of a slice is the max number of elements that it can hold without allocating more memory.
+	// i.e. length less than equal to slice.
+	// BUT array is fixed can't change its length during exection of programm hence its length and capacity is same.
 	
 	//Rule2
 	fmt.Printf("Len: %v - Capacity %v", len(arr), cap(arr))  		// Len: 5 - Capacity 5
@@ -64,16 +65,16 @@ func main() {
 	fmt.Println(arr)		// [1000 2 3 4 5]
 	
 	// Rule5
-	slc_make := make([]int, 5)	// len and capacity are 5
+	slc_make := make([]int, 5)	// len and capacity both are 5
 	println(slc_make)		// [5/5]0xc000068e68
 	fmt.Println(slc_make)		// [0 0 0 0 0]
 	
-	slc_make_ := make([]int, 2, 7)	// len and capacity= 2 & 7
+	slc_make_ := make([]int, 2, 7)	// len is 2 and capacity 7
 	fmt.Println(slc_make_)		// [0 0]
-		
+
 	
 	// Rule6
-	slc_make_ = append(slc_make_, 6, 9, 69)		// len and capacity= 5 & 7
+	slc_make_ = append(slc_make_, 6, 9, 69)		// appending new elements ie. 6,9,69 to the slice
 	fmt.Println(slc_make_)				// [0 0 6 9 69]
 				
 	// Rule7**
@@ -99,6 +100,11 @@ func main() {
 	// Best way
 	slc_best := append(arr1[:], arr2[:]...)
 	fmt.Println(slc_best)
+
+	// Types
+	fmt.Printf("Type: %T", arr)  	//Type: [5]int
+	fmt.Printf("Type: %T", slc_arr)	//Type: []int
+	
 } // main ends
 
 
