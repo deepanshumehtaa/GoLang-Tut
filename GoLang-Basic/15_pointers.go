@@ -42,11 +42,17 @@ type MyStruct struct{
 func main() {
 	
 	num1 := 10
-	var num2 int = 20
+	num2 := 20
 	s1 := "Deepanshu"
 	
+	// long hand
 	var p1 *int = &num1
-	var p2 *int = &num2
+	
+	// short hand
+	p2 := &num2
+	
+	
+	var p3 *string = &s1			// for string
 	
 	
 	println(&num1)				// 0xc000018050
@@ -65,7 +71,6 @@ func main() {
 	println(*p1)				// 100
 	println(reflect.ValueOf(num1).Kind())	// 2
 	
-	var p3 *string = &s1			// for string
 	*p3 = "Mehta"
 	
 	// Rule 5 
@@ -90,9 +95,6 @@ func main() {
 	println(obj.num)			// 100
 	println(p6.num)				// 100
 	println((*p6).num)			// 100
-			
-			
-	// NEW
 	
 	
 	// Double Pointer
@@ -106,7 +108,5 @@ func main() {
 	println(&pt2)				// 0xc000068f08, p2's address
 	
 	
-	
-	
-}// main ends
+}  // main ends
 
