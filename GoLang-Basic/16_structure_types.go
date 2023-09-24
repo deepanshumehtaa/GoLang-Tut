@@ -39,7 +39,7 @@ func main() {
     
     // level 2
     p11 := Rect{length: 11, breadth: 22}
-    t1 := Triangle{dimensions: &p11, hypotnuse: 200}
+    t1 := Triangle{dimensions: &p11, hypotnuse: 200}  // magic is here dude
     fmt.Println("Triangle Length: ", t1.dimensions.length)
     fmt.Println("Triangle Area: ", t1.getArea())
 
