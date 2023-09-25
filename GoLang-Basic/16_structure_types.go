@@ -24,7 +24,7 @@ func (tri *Triangle) getArea() (float64, ) {
 
 // inherit
 type Triangle2 struct {
-	Rect // inherit: all the classes of `Triangle` got inherit into `Triangle2`
+	Rect // inherit: all the fields of `Triangle` into `Triangle2`
 	hypotnuse float64
 }
 
