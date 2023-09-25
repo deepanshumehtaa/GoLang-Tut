@@ -21,6 +21,14 @@ func (tri *Triangle) getArea() (float64, ) {
     return float64(tri.dimensions.length) * tri.dimensions.breadth * tri.hypotnuse
 }
 
+
+// inherit
+type Triangle2 struct {
+	Rect // inherit: all the classes of `Triangle` got inherit into `Triangle2`
+	hypotnuse float64
+}
+
+
 func main() {
     
     var p0 Rect = Rect{11, 22, true}
@@ -39,8 +47,13 @@ func main() {
     
     // level 2
     p11 := Rect{length: 11, breadth: 22}
-    t1 := Triangle{dimensions: &p11, hypotnuse: 200}  // magic is here dude
+    t1 := Triangle{dimensions: &p11, hypotnuse: 200}  // magic is here
     fmt.Println("Triangle Length: ", t1.dimensions.length)
     fmt.Println("Triangle Area: ", t1.getArea())
-
+    
+    // level 3
+    p111 := Rect{length: 11, breadth: 22}
+    t111 := Triangle2{Rect: p111, hypotnuse: 200}  // magic is here, pass the object of `Rect`
+    fmt.Println("Triangle Length t111: ", t111.Rect.length)
+    fmt.Println("Triangle Area t111: ", t111.Rect.getArea())
 }
