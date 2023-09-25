@@ -34,8 +34,8 @@ func main() {
     var p0 Rect = Rect{11, 22, true}
     fmt.Println(p0)
     
-    p1 := Rect{10, 20, false}
-    fmt.Println(p1)
+    rect_obj := Rect{10, 20, false}
+    fmt.Println(rect_obj)
     
     // Recommended (Also, using this way gives u the power to use some parameter as optional)
     p2 := Rect{length: 21, breadth: 22, isTrue: true}
