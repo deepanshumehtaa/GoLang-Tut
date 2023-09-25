@@ -13,7 +13,7 @@ func (r *Rect) getArea() (float64, ) {
 }
 
 type Triangle struct {
-	dimensions *Rect
+	dimensions *Rect  // making connection can also use only `*Rect`
 	hypotnuse float64
 }
 
@@ -54,6 +54,6 @@ func main() {
     // level 3
     p111 := Rect{length: 11, breadth: 22}
     t111 := Triangle2{Rect: p111, hypotnuse: 200}  // magic is here, pass the object of `Rect`
-    fmt.Println("Triangle Length t111: ", t111.Rect.length)
+    fmt.Println("t111: ", t111.Rect.length, t111.breadth)  // both are same
     fmt.Println("Triangle Area t111: ", t111.Rect.getArea())
 }
