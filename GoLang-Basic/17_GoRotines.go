@@ -94,22 +94,23 @@ import (
     "fmt"
 )
 
-func hello() {  
-    fmt.Println("Hello world goroutine")
+func hello() {
+	fmt.Println("Hello GOA")
 }
 
-func main() {  
-    go hello()
-    fmt.Println("main function")
+func main() {
+	go hello()
+	fmt.Println("main function")
 } // main ends
+
 
 The o/p:
 main function
 
 Program exited.
 
-Why??, Because main function finish earlier before hello function.
-solution?, make your main function sleep for 1 sec,
+Why??, as hello is the go function so it is a go routine and it is running concurrently/parllely with the main function, 
+when the main function ends, the Goroutine running, parllely also ends.
 
 
 // *************************************************************************
@@ -127,7 +128,7 @@ func hello() {
 
 func main() {  
     go hello()
-    time.Sleep(1 * time.Second)
+    time.Sleep(time.Millisecond * 10)  // wait for 10 milli seconds
     fmt.Println("main function")
 }
 
