@@ -37,6 +37,7 @@ func dotProduct(arr1 []int, arr2 []int) []int {
 func main() {
 	start := time.Now()
 
+	// channels are nothing but Queues that follow FIFO
 	myChannel := make(chan []int, 2)  // the channel has capacity of 2 and can hold element of type `array of int`
 	myGroup := &sync.WaitGroup{}
 	myGroup.Add(2)
