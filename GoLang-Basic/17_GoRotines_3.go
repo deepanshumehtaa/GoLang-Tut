@@ -1,5 +1,6 @@
 /*
 https://youtu.be/LGVRPFZr548
+Deepanshu Mehta
 */
 
 package main
@@ -133,5 +134,73 @@ func main() {
 // 3rd Now its time to wait for the other workers to complete the work and at the end join the work
 
 
+package main
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
+func getUserName(_id int) string {
+	time.Sleep(time.Millisecond * 100)
+	if _id == 1 {
+		return "deepanshumehtaa"
+	} else {
+		panic("No id found !")
+	}
+}
+
+func getUserData(userName string, response_channel chan any, wg *sync.WaitGroup) {
+	time.Sleep(time.Millisecond * 900)
+	if userName == "deepanshumehtaa" {
+		data := map[string]interface{}{
+			"id":      1,
+			"Name":    "John",
+			"Age":     30,
+			"Country": "USA",
+		}
+		response_channel <- data // pushing value into the channel
+		wg.Done()
+	} else {
+		panic("No id found !")
+	}
+}
+
+func getUserFriendsCount(userName string, response_channel chan any, wg *sync.WaitGroup) {
+	time.Sleep(time.Millisecond * 900)
+	if userName == "deepanshumehtaa" {
+		response_channel <- 100
+		wg.Done()
+
+	} else {
+		panic("No id found !")
+	}
+}
+
+func main() {
+	start := time.Now()
+
+	_id := 1
+	var userName string = getUserName(_id)
+
+	response_channel := make(chan any, 2) // channel has buffer size of 2, 2 is the capacity of the channel
+	// allowing the channel to hold more than one value at a time before it blocks further sends.
+	// advantages are: Avoiding Deadlock
+	wg := &sync.WaitGroup{}
+
+	wg.Add(2) // as we have two workers, now each of them needs to tell that they have done working
+	go getUserData(userName, response_channel, wg)
+	go getUserFriendsCount(userName, response_channel, wg)
+	wg.Wait() // wait for workers to finish
+    
+	close(response_channel) // Close the channel after all values are sent
+
+	// Retrieve and print values from the channel
+	for resp := range response_channel {
+		fmt.Println("The Response for the channel is: ", resp)
+	}
+
+	fmt.Println("Program ends in ", time.Since(start))
+
+} // main ends
 
